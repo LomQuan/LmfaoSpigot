@@ -13,7 +13,7 @@ index 9bba76909494839d587cdd898830202695bf6985..db9873c4714456b08d3ebb311401d41e
  
      // Paper start - Further improve server tick loop
 -    private static final int TPS = 20;
-+    private static final int TPS = 22; // ElainaSpigot - :troll:
++    private static final int TPS = 100; // ElainaSpigot - :troll:
      private static final long SEC_IN_NANO = 1000000000;
      public static final long TICK_TIME = SEC_IN_NANO / TPS;
      private static final long MAX_CATCHUP_BUFFER = TICK_TIME * TPS * 60L;
@@ -53,7 +53,7 @@ index 6d21c326922ad424734c803c8f0ab586bfa999b7..d0c19006794f35defb0418bc568e4e32
      private static String format(double tps) // Paper - Made static
      {
          return ( ( tps > 18.0 ) ? ChatColor.GREEN : ( tps > 16.0 ) ? ChatColor.YELLOW : ChatColor.RED ).toString()
--                + ( ( tps > 20.0 ) ? "*" : "" ) + Math.min( Math.round( tps * 100.0 ) / 100.0, 20.0 );
-+                + ( ( tps > 22.0 ) ? "*" : "" ) + Math.min( Math.round( tps * 100.0 ) / 100.0, 22.0 ); // ElainaSpigot :troll:
+-                + ( ( tps > 20.0 ) ? "*" : "" ) + Math.min( Math.round( tps * 100.0 ) / 100.0, 100.0 );
++                + ( ( tps > 100.0 ) ? "*" : "" ) + Math.min( Math.round( tps * 100.0 ) / 100.0, 100.0 ); // ElainaSpigot :troll:
      }
  }
